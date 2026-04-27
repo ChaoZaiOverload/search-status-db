@@ -3,6 +3,11 @@
   "name": "Douban Status Search",
   "version": "1.0.0",
   "description": "Search your Douban main feed statuses by keyword",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "permissions": ["storage"],
   "host_permissions": ["https://www.douban.com/*"],
   "content_scripts": [
