@@ -1,0 +1,84 @@
+#dss-panel {
+  background: #f8f5f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #333;
+}
+
+#dss-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #3d7a3d;
+}
+
+.dss-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.dss-row label {
+  flex-shrink: 0;
+  margin-right: 6px;
+  color: #555;
+}
+
+.dss-row input {
+  flex: 1;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.dss-buttons {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.dss-buttons button {
+  flex: 1;
+  padding: 4px 0;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+
+.dss-buttons button:hover:not(:disabled) {
+  background: #e8f4e8;
+}
+
+.dss-buttons button:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+#dss-status {
+  font-size: 12px;
+  color: #888;
+  min-height: 16px;
+  margin-bottom: 6px;
+}
+
+#dss-results {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.dss-result-item {
+  border-top: 1px solid #e5e5e5;
+  padding: 8px 0;
+}
+
+.dss-result-item:first-child {
+  border-top: none;
+}

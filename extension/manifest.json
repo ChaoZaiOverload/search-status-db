@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Douban Status Search",
+  "version": "1.0.0",
+  "description": "Search your Douban main feed statuses by keyword",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.douban.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.douban.com/", "https://www.douban.com/?*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
