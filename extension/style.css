@@ -82,3 +82,33 @@
 .dss-result-item:first-child {
   border-top: none;
 }
+
+/* Cap tall content inside result items */
+
+/* Override Douban's inline white-space:pre-line which turns every \n into a line break */
+.dss-result-item blockquote p {
+  white-space: normal !important;
+}
+
+.dss-result-item blockquote {
+  max-height: 120px;
+  overflow: hidden;
+  position: relative;
+  margin: 4px 0;
+}
+
+/* Fade gradient at bottom to indicate truncation */
+.dss-result-item blockquote::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 32px;
+  background: linear-gradient(transparent, #f8f5f0);
+  pointer-events: none;
+}
+
+/* Cap injected photo grids */
+.dss-result-item .pics-wrapper {
+  max-height: 120px;
+  overflow: hidden;
+}
