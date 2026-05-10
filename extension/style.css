@@ -113,32 +113,24 @@
   overflow: hidden;
 }
 
-/* Fix book/movie/music subject blocks (.block-subject) in narrow panel.
-   Douban's layout floats .pic left with a fixed width; without that CSS
-   the cover image squeezes .content to ~1 character wide. */
+/* Fix book/movie/music subject blocks in narrow panel.
+   Force vertical stack so text sits below the cover and gets full width. */
 .dss-result-item .block-subject {
   display: flex !important;
-  align-items: flex-start;
-  gap: 8px;
-  overflow: hidden;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  float: none !important;
+  gap: 6px;
 }
 
-.dss-result-item .block-subject .pic {
-  flex-shrink: 0;
-}
-
+.dss-result-item .block-subject .pic,
 .dss-result-item .block-subject .pic img {
-  max-width: 64px;
-  height: auto;
-  display: block;
+  float: none !important;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .dss-result-item .block-subject .content {
-  flex: 1;
+  width: 100% !important;
   min-width: 0;
-}
-
-.dss-result-item .block-subject .title a {
-  word-break: break-all;
-  display: block;
 }
