@@ -83,6 +83,14 @@
   border-top: none;
 }
 
+.dss-result-item.dss-clickable {
+  cursor: pointer;
+}
+
+.dss-result-item.dss-clickable:hover {
+  background: #ede9e3;
+}
+
 /* Cap tall content inside result items */
 
 /* Override Douban's inline white-space:pre-line which turns every \n into a line break */

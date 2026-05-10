@@ -245,6 +245,18 @@
     const wrapper = document.createElement('div');
     wrapper.className = 'dss-result-item';
     wrapper.appendChild(node.cloneNode ? node.cloneNode(true) : node);
+
+    // Make the whole card open the status URL (same as clicking the date link)
+    const statusLink = wrapper.querySelector('span.created_at a');
+    if (statusLink?.href) {
+      const url = statusLink.href;
+      wrapper.classList.add('dss-clickable');
+      wrapper.addEventListener('click', e => {
+        if (e.target.closest('a')) return; // let existing links handle themselves
+        window.open(url, '_blank');
+      });
+    }
+
     results.appendChild(wrapper);
   }
 
